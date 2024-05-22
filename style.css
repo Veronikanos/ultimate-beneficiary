@@ -1,0 +1,611 @@
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  /* position: relative; */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+p {
+  font-size: 17px;
+}
+
+.game-page {
+  background-color: black;
+  /* background-image: url(./noisy-texture.png); */
+  color: #cacaca;
+  font-family: Roboto, serif;
+}
+
+section {
+  padding-bottom: 50px;
+  padding-top: 50px;
+  @media screen and (min-width: 1440px) {
+    padding-bottom: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  @media screen and (min-width: 420px) {
+    max-width: 375px;
+  }
+  @media screen and (min-width: 1440px) {
+    max-width: 1225px;
+  }
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  z-index: 1;
+  background: linear-gradient(black, transparent);
+  @media screen and (min-width: 1440px) {
+    padding-top: 29px;
+    padding-bottom: 29px;
+  }
+}
+
+.logo {
+  display: block;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu-button {
+  background-color: transparent;
+  font-family: "Roboto Condensed", serif;
+  color: #cacaca;
+  text-transform: uppercase;
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 110%;
+  transition: color 0.3s ease-in-out;
+  @media screen and (min-width: 1440px) {
+    display: none;
+  }
+}
+
+.nav-menu-button:hover {
+  color: #fff;
+}
+
+.nav-menu {
+  display: none;
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    gap: 73px;
+    text-transform: uppercase;
+  }
+}
+
+.nav-menu-item {
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-menu-item:hover,
+.nav-menu-item:focus {
+  color: #f0dfa1;
+}
+
+.hero-container {
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.hero-wrapper {
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 1440px) {
+    align-items: flex-start;
+  }
+}
+.hero-img-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 273px;
+  margin: 0 auto;
+  @media screen and (min-width: 1440px) {
+    order: 1;
+    max-width: 470px;
+    max-height: 560px;
+  }
+}
+
+.hero-img {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.rotate-animation {
+  position: absolute;
+  top: 20px;
+  z-index: -1;
+  transition: transform 1s ease; /* Анімація для transform з тривалістю 1 секунда та легким згладжуванням */
+  @media screen and (min-width: 1440px) {
+    width: 781px;
+  }
+}
+
+.hero-img.active {
+  position: absolute;
+  top: 0;
+  opacity: 1;
+}
+
+h1 {
+  font-size: 60px;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Roboto Condensed", serif;
+  line-height: 110%;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 11px;
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 60px;
+    font-size: 64px;
+  }
+}
+
+h2 {
+  font-size: 42px;
+  text-transform: uppercase;
+  font-family: "Roboto Condensed", serif;
+  font-weight: 700;
+  line-height: 110%;
+  color: white;
+  text-align: center;
+  margin-bottom: 22px;
+  @media screen and (min-width: 1440px) {
+    font-size: 55px;
+    text-align: initial;
+  }
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 150%;
+  font-family: "Roboto Condensed", serif;
+  text-transform: uppercase;
+  color: #f0dfa1;
+  @media screen and (min-width: 1440px) {
+    font-size: 25px;
+  }
+}
+
+.title-description {
+  font-size: 27px;
+  color: #f0dfa1;
+  font-family: "Roboto Condensed", serif;
+  text-align: center;
+  font-weight: 700;
+  line-height: 110%;
+  margin-bottom: 40px;
+  text-transform: none;
+  @media screen and (min-width: 1440px) {
+    order: -1;
+    padding-top: 208px;
+    margin-bottom: 10px;
+    font-size: 25px;
+  }
+}
+
+.cta-title {
+  display: none;
+  text-transform: none;
+  color: white;
+  margin-bottom: 24px;
+  @media screen and (min-width: 1440px) {
+    display: block;
+  }
+}
+
+.slider-container {
+  width: 100%;
+  margin-bottom: 52px;
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 97px;
+  }
+}
+
+.slider-item {
+  width: 303px;
+  height: 78px;
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 14px;
+  box-shadow: 0px 3px 29.8px 0px rgba(240, 223, 161, 0.3);
+  margin: 0 auto;
+
+  @media screen and (min-width: 1440px) {
+    width: 235px;
+    margin: 0;
+    box-shadow: none;
+    border: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.slider-item:not(:first-of-type) {
+  display: none;
+  @media screen and (min-width: 1440px) {
+    display: flex;
+  }
+}
+
+.slider-item img {
+  height: 57px;
+}
+
+.slider-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  @media screen and (min-width: 1440px) {
+    font-size: 15px;
+  }
+}
+
+.buttons-group {
+  display: flex;
+  gap: 11px;
+  justify-content: center;
+}
+
+.game-button {
+  width: 163px;
+  text-transform: uppercase;
+  border: #f0dfa1 3px solid;
+  background-color: transparent;
+  font-family: "Roboto Condensed", serif;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 4px;
+  text-align: center;
+  color: #f0dfa1;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  transition-property: color, background-color, border-color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  @media screen and (min-width: 1440px) {
+    width: 300px;
+  }
+}
+
+.button-accent {
+  color: black;
+  background-color: #f0dfa1;
+  cursor: pointer;
+  @media screen and (min-width: 1440px) {
+    width: 278px;
+  }
+}
+
+.game-button:hover,
+.game-button:focus {
+  background-color: white;
+  color: black;
+  border-color: transparent;
+}
+
+/* about section */
+
+.title-wrapper {
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.requirements {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  justify-content: center;
+  @media screen and (min-width: 1440px) {
+    font-size: 25px;
+  }
+}
+
+.requirements > li:nth-child(2) {
+  position: relative;
+}
+
+.requirements > li:nth-child(2)::after,
+.requirements > li:nth-child(2)::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background-color: #f0dfa1;
+}
+.requirements > li:nth-child(2)::after {
+  left: -27px;
+}
+
+.requirements > li:nth-child(2)::before {
+  right: -27px;
+}
+
+.audience {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (min-width: 1440px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.audience li {
+  max-width: 333px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  margin-top: 48px;
+}
+
+.audience li::before {
+  content: url(./OSLO.svg);
+  display: block;
+  position: absolute;
+  top: 0px;
+  width: 126px;
+  height: 126px;
+}
+
+.audience-title {
+  padding-top: 140px;
+}
+
+/* benefits section */
+
+.benefits-wrapper {
+  position: relative;
+  /* display: grid; */
+  /* grid-column-end: 4; */
+}
+
+.benefits-text {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 150%;
+  font-family: "Roboto Condensed", serif;
+  color: #f0dfa1;
+  max-width: 245px;
+  margin: 0 auto;
+  margin-bottom: 12px;
+  @media screen and (min-width: 1440px) {
+    font-size: 25;
+    text-transform: uppercase;
+    margin: 0;
+    max-width: none;
+    margin-bottom: 88px;
+  }
+}
+
+.benefits-cards-img {
+  margin: 0 auto;
+  margin-bottom: 50px;
+
+  @media screen and (min-width: 1440px) {
+    margin: 0;
+    width: 463px;
+    position: absolute;
+  }
+}
+
+.cards {
+  @media screen and (min-width: 1440px) {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* grid-column: span 2; */
+    /* flex-wrap: wrap; */
+    gap: 41px;
+  }
+}
+
+.card-item:first-of-type {
+  @media screen and (min-width: 1440px) {
+    grid-column-start: 3;
+  }
+}
+
+.card-item {
+  margin-bottom: 10px;
+  @media screen and (min-width: 1440px) {
+    width: 212px;
+    /* height: 308px; */
+    margin-bottom: 0;
+  }
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Roboto Condensed", serif;
+  line-height: 110%;
+  text-align: center;
+  padding-top: 19px;
+  padding-bottom: 19px;
+  color: black;
+  border-radius: 4px;
+  @media screen and (min-width: 1440px) {
+    height: 76px;
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.card-title__blue {
+  background-color: #4fb5c1;
+  color: #fff;
+}
+.card-title__yellow {
+  background-color: #f0d32e;
+}
+
+.card-title__green {
+  background-color: #82b241;
+}
+
+.card-title__plum {
+  background-color: #844078;
+}
+
+.card-title__olive {
+  background-color: #424927;
+  color: #fff;
+}
+
+.card-title__plum {
+  background-color: #844078;
+}
+
+.card-title-wrapper {
+  border-bottom: black 3px solid;
+}
+
+.card-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-row: span 2;
+  @media screen and (min-width: 1440px) {
+    width: 100%;
+    height: 138px;
+  }
+}
+
+.card-description {
+  display: grid;
+  grid-template-columns: auto 230px;
+  gap: 7px;
+  background-color: #f0dfa1;
+  color: black;
+  padding: 20px 10px;
+
+  justify-content: space-between;
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    flex-direction: column;
+    padding: 13px 10px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.card-text {
+  margin-bottom: 19px;
+  max-width: 230px;
+  @media screen and (min-width: 1440px) {
+    font-size: 13px;
+    margin-bottom: 0;
+    text-align: center;
+    order: -1;
+  }
+}
+
+.games-comparison {
+  display: flex;
+  gap: 21px;
+  width: 100%;
+  @media screen and (min-width: 1440px) {
+    font-size: 16px;
+  }
+}
+
+.games-comparison li {
+  position: relative;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Roboto Condensed", serif;
+  padding-left: 20px;
+}
+
+.games-comparison li::before {
+  content: url(./ok-sign.svg);
+  position: absolute;
+  top: -4px;
+  left: 0;
+}
