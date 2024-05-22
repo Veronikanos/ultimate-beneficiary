@@ -722,3 +722,32 @@ h3,
   width: 218px;
   margin: 0 auto;
 }
+
+.service-option__checked {
+  position: relative;
+}
+.service-option__checked::before {
+  position: absolute;
+  content: "";
+  background-image: url(./ok-sign.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 32px;
+  height: 31px;
+  top: 0;
+  left: 0;
+}
+
+.service-card.green-card .service-card-title {
+  background-color: #82b241;
+}
+
+.service-card.green-card .checkmark,
+.service-card.green-card .service-options-wrapper,
+.service-card.green-card .game-button {
+  border-color: #82b241;
+}
+.service-card.green-card .option-price,
+.service-card.green-card .game-button {
+  color: #82b241;
+}
