@@ -223,7 +223,8 @@ h2 {
   }
 }
 
-h3 {
+h3,
+.option-price {
   font-size: 20px;
   font-weight: 700;
   line-height: 150%;
@@ -489,10 +490,14 @@ h3 {
 }
 
 .card-item {
-  margin-bottom: 10px;
   @media screen and (min-width: 1440px) {
     width: 212px;
-    /* height: 308px; */
+  }
+}
+
+.card-item:not(:last-of-type) {
+  margin-bottom: 10px;
+  @media screen and (min-width: 1440px) {
     margin-bottom: 0;
   }
 }
@@ -608,4 +613,112 @@ h3 {
   position: absolute;
   top: -4px;
   left: 0;
+}
+
+.services-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  @media screen and (min-width: 1440px) {
+    flex-direction: row;
+  }
+}
+
+.service-card-title {
+  color: black;
+  background-color: #f0dfa1;
+  padding-top: 12px;
+  padding-bottom: 7px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  text-align: center;
+}
+
+.service-options-wrapper {
+  border: 3px #f0dfa1 solid;
+  padding: 25px 14px 14px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.service-option {
+  display: block;
+  position: relative;
+  padding-left: 45px;
+  margin-bottom: 18px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #fff;
+}
+.service-option:last-of-type {
+  margin-bottom: 25px;
+}
+
+.service-option-name {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Roboto Condensed", serif;
+  margin-bottom: 8px;
+}
+
+.option-language {
+  font-size: 17px;
+  font-weight: 700;
+  display: block;
+}
+
+.option-description {
+  margin-bottom: 4px;
+  line-height: 150%;
+  color: #cacaca;
+}
+
+.option-price span {
+  text-transform: none;
+}
+
+.service-option input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  background-color: black;
+  border: 1px #f0dfa1 solid;
+  border-radius: 4px;
+}
+
+.service-option:hover input ~ .checkmark {
+  background-color: black;
+}
+.service-option input:checked ~ .checkmark {
+  /* background-color: #2196f3; */
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.service-option input:checked ~ .checkmark:after {
+  display: block;
+}
+.service-option .checkmark:after {
+  content: url(./ok-sign.svg);
+}
+
+.service-card .game-button {
+  display: block;
+  width: 218px;
+  margin: 0 auto;
 }
