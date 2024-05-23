@@ -341,6 +341,12 @@ h3,
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
   @media screen and (min-width: 1440px) {
+    width: 278px;
+  }
+}
+
+.hero-button {
+  @media screen and (min-width: 1440px) {
     width: 300px;
   }
 }
@@ -621,6 +627,19 @@ h3,
   gap: 25px;
   @media screen and (min-width: 1440px) {
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 51px;
+  }
+}
+
+.service-card {
+  @media screen and (min-width: 1440px) {
+    max-width: 367px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 30%;
+    box-sizing: border-box;
   }
 }
 
@@ -635,10 +654,17 @@ h3,
 }
 
 .service-options-wrapper {
+  flex: 1;
   border: 3px #f0dfa1 solid;
   padding: 25px 14px 14px;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 38px 30px 31px;
+  }
 }
 
 .service-option {
@@ -654,6 +680,7 @@ h3,
   user-select: none;
   color: #fff;
 }
+
 .service-option:last-of-type {
   margin-bottom: 25px;
 }
@@ -679,6 +706,13 @@ h3,
 
 .option-price span {
   text-transform: none;
+}
+
+.option-link__book {
+  font-size: 14px;
+  color: #f0dfa1;
+  font-family: "Roboto Condensed", serif;
+  text-decoration: underline;
 }
 
 .service-option input {
@@ -721,6 +755,11 @@ h3,
   display: block;
   width: 218px;
   margin: 0 auto;
+  @media screen and (min-width: 1440px) {
+    width: 278px;
+    align-self: flex-end; /* Ensures the button is at the bottom of the wrapper */
+    margin-top: auto;
+  }
 }
 
 .service-option__checked {
