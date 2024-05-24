@@ -1,3 +1,11 @@
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 ul {
   list-style: none;
 }
@@ -55,6 +63,8 @@ a {
 
 p {
   font-size: 17px;
+  line-height: 150%;
+  letter-spacing: -0.2px;
 }
 
 .game-page {
@@ -663,7 +673,7 @@ h3,
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 38px 30px 31px;
+    padding: 38px 14px 31px 30px;
   }
 }
 
@@ -679,6 +689,9 @@ h3,
   -ms-user-select: none;
   user-select: none;
   color: #fff;
+  @media screen and (min-width: 1440px) {
+    padding-left: 51px;
+  }
 }
 
 .service-option:last-of-type {
@@ -702,13 +715,16 @@ h3,
   margin-bottom: 4px;
   line-height: 150%;
   color: #cacaca;
+  @media screen and (min-width: 1440px) {
+    font-size: 15px;
+  }
 }
 
 .option-price span {
   text-transform: none;
 }
 
-.option-link__book {
+.option-link__yellow {
   font-size: 14px;
   color: #f0dfa1;
   font-family: "Roboto Condensed", serif;
@@ -730,9 +746,18 @@ h3,
   background-color: black;
   border: 1px #f0dfa1 solid;
   border-radius: 4px;
+  @media screen and (min-width: 1440px) {
+    height: 27px;
+    width: 27px;
+  }
 }
 
-.service-option:hover input ~ .checkmark {
+.service-option:hover
+  input
+  ~ .checkmark
+  .service-option:focus
+  input
+  ~ .checkmark {
   background-color: black;
 }
 .service-option input:checked ~ .checkmark {
@@ -748,7 +773,13 @@ h3,
   display: block;
 }
 .service-option .checkmark:after {
-  content: url(./ok-sign.svg);
+  content: "";
+
+  background-image: url(./ok-sign.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
 }
 
 .service-card .game-button {
@@ -789,4 +820,96 @@ h3,
 .service-card.green-card .option-price,
 .service-card.green-card .game-button {
   color: #82b241;
+}
+
+.rules-title {
+  margin-bottom: 29px;
+}
+
+video.rules-video {
+  width: 100%;
+  margin-bottom: 38px;
+  @media screen and (min-width: 1440px) {
+    width: 610px;
+    margin-bottom: 0;
+  }
+}
+
+.rules-wrapper {
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+    /* justify-content: flex-start; */
+    align-items: flex-start;
+    padding-bottom: 210px;
+    background: url(./rules-timeline-desktop.png);
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+  }
+}
+
+.goals-wrapper {
+  background: url(./rules-timeline-mob.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  @media screen and (min-width: 1440px) {
+    background: none;
+  }
+}
+.goals-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 76px;
+  @media screen and (min-width: 1440px) {
+    gap: 49px;
+  }
+}
+
+.goal {
+  max-width: 231px;
+  @media screen and (min-width: 1440px) {
+    max-width: none;
+  }
+}
+
+.goal-title {
+  margin-bottom: 6px;
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 0;
+  }
+}
+
+.goal-subtitle {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 150%;
+  margin-bottom: 30px;
+  font-family: "Roboto Condensed", serif;
+  @media screen and (min-width: 1440px) {
+    font-size: 25px;
+    margin-bottom: 18px;
+  }
+}
+
+.rules-description {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  @media screen and (min-width: 1440px) {
+    flex-direction: row;
+    font-size: 15px;
+    gap: 27px;
+    font-size: 15px;
+  }
+}
+
+.rules-description p {
+  @media screen and (min-width: 1440px) {
+    font-size: 15px;
+  }
+}
+
+.rules-description p:first-of-type {
+  max-width: 268px;
 }
