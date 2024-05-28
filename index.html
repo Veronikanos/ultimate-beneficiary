@@ -549,47 +549,45 @@
           </ul>
         </div>
       </section>
-      <script>
-        function changeHeroImage() {
-          var image1 = document.getElementById("image1");
-          var image2 = document.getElementById("image2");
-          var isImage1Active = true;
-
-          setInterval(function () {
-            if (isImage1Active) {
-              image1.classList.remove("active");
-              image2.classList.add("active");
-            } else {
-              image2.classList.remove("active");
-              image1.classList.add("active");
-            }
-            isImage1Active = !isImage1Active;
-          }, 3000); // змінює зображення кожні 3 секунди
-        }
-
-        function rotateLogo() {
-          var image = document.getElementById("rotatedLogo");
-          var rotationDirection = 1; // Напрямок обертання: 1 - вправо, -1 - вліво
-          var rotationAngle = 90; // Кут обертання
-          var currentRotation = 0; // Поточний кут обертання
-
-          setInterval(function () {
-            // Зміна напрямку обертання
-            rotationDirection *= -1;
-            // Обчислення нового кута обертання
-            var newRotation =
-              currentRotation + rotationDirection * rotationAngle;
-            // Застосування обертання до зображення
-            image.style.transform = "rotate(" + newRotation + "deg)";
-            // Оновлення поточного кута обертання
-            currentRotation = newRotation;
-          }, 3000); // змінює кут обертання кожні 3 секунди
-        }
-        document.addEventListener(
-          "DOMContentLoaded",
-          changeHeroImage(),
-          rotateLogo()
-        );
+      <section class="author">
+        <div class="container">
+          <h2>Автор гри</h2>
+          <div class="author-wrapper">
+            <picture class="author-photo">
+              <source srcset="./author-photo-desktop.png" media="(min-width: 1440px)">
+              <img src="./author-photo-mobile.png" alt="Author Photo">
+            </picture>
+            <!-- <div class="author-contacts"> -->
+              <h3>Роман Кузюк</h3>
+              <ul class="social-list">
+                <li><a class="instagram" href="#">
+                  <svg>
+                    <use xlink:href="sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a></li>
+                <li><a class="facebook" href="#">
+                  <svg>
+                    <use xlink:href="sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a></li>
+                <li><a class="telegram" href="#">
+                  <svg>
+                    <use xlink:href="sprite.svg#icon-telegram"></use>
+                  </svg>
+                </a></li>
+              </ul>
+            <!-- </div> -->
+              <div class="author-about">
+                <p>Спеціаліст із банківського права, цінних паперів та корпоративного управління</p>
+                <p>Голова Наглядових рад “Енергопроект” та “Оріана” — компаній Фонду держмайна України з 2021 по 2023 роки</p>
+                <p>Засновник видавництва та Громадської організації “КІНЦЕВИЙ БЕНЕФІЦІАР”</p>
+              </div>
+           
+          </div>
+        </div>
+      </section>
+      <script src="./script.js">
+       
       </script>
     </main>
     <footer class="footer"></footer>
