@@ -31,5 +31,16 @@ function rotateLogo() {
     // Оновлення поточного кута обертання
     currentRotation = newRotation;
   }, 3000); // змінює кут обертання кожні 3 секунди
+
+  // YOUTUBE VIDEO PLAYS
+  var cover = document.getElementById("video-cover");
+  var video = document.getElementById("video");
+
+  cover.addEventListener("click", function () {
+    cover.style.display = "none";
+    video.style.display = "block";
+    video.src += "?autoplay=1"; // Automatically start the video
+  });
 }
+
 document.addEventListener("DOMContentLoaded", changeHeroImage(), rotateLogo());

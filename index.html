@@ -149,13 +149,17 @@
             Кінцевий бенефіціар має унікальні ігрові механіки
           </p>
           <div class="benefits-wrapper">
-            <img class="benefits-cards-img" src="./benefits-img.png" alt="" />
+            <picture>
+              <source srcset="benefits-card-mobile.png" media="(max-width: 1440px)">
+              <source srcset="benefits-card-desktop.png" media="(min-width: 1441px)">
+              <img class="benefits-cards-img" src="benefits-card-desktop.png" alt="Benefits Card">
+          </picture>
 
             <ul class="cards">
               <li class="card-item">
                 <div class="card-title-wrapper">
                   <p class="card-title card-title__blue">
-                    Пасивний грошовий потік
+                    Пасивний  грошовий потік
                   </p>
                 </div>
                 <div class="card-description">
@@ -335,7 +339,7 @@
                 <label class="service-option">
                   <p class="service-option-name">Кінцевий бенефіціар 4.5.0</p>
                   <p class="option-description">
-                    Для військовослужбовців,  які хочуть почати бізнес
+                    Для військовослужбовців, які хочуть почати бізнес
                   </p>
                   <p class="option-price">1800<span>грн</span></p>
                   <input type="checkbox" />
@@ -558,7 +562,7 @@
               <img src="./author-photo-mobile.png" alt="Author Photo">
             </picture>
             <!-- <div class="author-contacts"> -->
-              <h3>Роман Кузюк</h3>
+              <h3 class="author-name">Роман Кузюк</h3>
               <ul class="social-list">
                 <li><a class="instagram" href="#">
                   <svg>
@@ -576,12 +580,76 @@
                   </svg>
                 </a></li>
               </ul>
-            <!-- </div> -->
-              <div class="author-about">
-                <p>Спеціаліст із банківського права, цінних паперів та корпоративного управління</p>
-                <p>Голова Наглядових рад “Енергопроект” та “Оріана” — компаній Фонду держмайна України з 2021 по 2023 роки</p>
-                <p>Засновник видавництва та Громадської організації “КІНЦЕВИЙ БЕНЕФІЦІАР”</p>
+
+                <p class="author-about">Спеціаліст із банківського права, цінних паперів та корпоративного управління</p>
+                <p class="author-about">Голова Наглядових рад “Енергопроект” та “Оріана” — компаній Фонду держмайна України з 2021 по 2023 роки</p>
+                <p class="author-about">Засновник видавництва та Громадської організації “КІНЦЕВИЙ БЕНЕФІЦІАР”</p>
+
+              <div class="work-experience">
+                <picture class="company-logo-wrapper">
+                  <source srcset="./ofir-capital-desk.png" media="(min-width: 1440)">
+                  <img class="company-logo ofir-logo" src="./ofir-capital-mob.png" alt="Ofir Capital Logo">
+                </picture>
+              <div class="work-description">
+                <span class="work-time">2017-2018</span>
+                <p>Директор Компанії  <br>з управління активами</p>
               </div>
+            </div> 
+              <div class="work-experience">
+                <picture class="company-logo-wrapper">
+                  <source srcset="./nova-poshta-desktop.png" media="(min-width: 1440px)">
+                  <img class="company-logo" src="./nova-poshta-mob.png" alt="Nova Poshta Logo">
+                </picture>
+                <div class="work-description"> 
+                  <span class="work-time">2015-2017</span>
+                  <p>Директор Департаменту корпоративного управління</p>
+                </div> 
+             </div>
+              <div class="work-experience companies">
+                <div class=" logo-set company-logo-wrapper">
+                  <picture>
+                    <source srcset="./vtb-desktop.png" media="(min-width: 1440px)">
+                    <img class="company-logo" src="./vtb-mobile.png" alt="VTB Logo">
+                  </picture>
+                  <picture>
+                    <source srcset="./pumb-desktop.png" media="(min-width: 1440px)">
+                    <img  src="./pumb-mobile.png" alt="Pumb Logo">
+                  </picture>
+
+                  <picture >
+                    <source srcset="./oshchadbank-desk.png" media="(min-width: 1440px)">
+                    <img  src="./oshchadbank-mob.png" alt="Oshchadbank Logo">
+                  </picture>
+              </div>
+              <div class="work-description">
+                <span class="work-time">2009-2015</span>
+                <p>Працював на керівних посадах</p>
+              </div>
+              </div>
+
+
+              <div class="author-book">
+                <div class="book-img-wrapper">
+                <img src="./book-beneficiary.png" alt="">
+              </div>
+                <p>Автор бізнес-роману “Кінцевий бенефіціар”</p>
+              </div>
+              <div class="author-book">
+                <div class="book-img-wrapper">
+                <img src="./book-sporty-businessman.png" alt="">
+              </div>
+                <p>Автор роману-методики “Спортивний бізнесмен”</p>
+              </div>
+              <div class="video-wrapper film">
+                <div class="video-cover" id="video-cover">
+                    <img src="cover-image.jpeg" alt="Video Cover">
+                    <button id="play-button">&#9658;</button>
+                </div>
+                <iframe id="video" src="https://www.youtube.com/embed/lOMaiD52zbU?si=OV34tYSj-oo3PTmB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p class="film-position">Продюсер тизеру та автор сценарію до фільму “Кінцевий бенефіціар”</p>
+            
+              </div>
+              
            
           </div>
         </div>
