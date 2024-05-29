@@ -306,12 +306,12 @@ h3,
   }
 }
 
-.slider-item:not(:first-of-type) {
+/* .slider-item:not(:first-of-type) {
   display: none;
   @media screen and (min-width: 1440px) {
     display: flex;
   }
-}
+} */
 
 .slider-item img {
   height: 57px;
@@ -1174,4 +1174,9 @@ video.rules-video {
   max-width: 313px;
   margin: 0 auto;
   text-align: center;
+}
+
+.swiper {
+  width: 100%;
+  height: auto;
 }

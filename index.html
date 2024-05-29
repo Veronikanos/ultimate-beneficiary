@@ -57,6 +57,8 @@
               настільна гра, яка вчить будувати бізнес
             </h2>
             <h3 class="cta-title">Навчись мислити і діяти як підприємець</h3>
+
+
             <ul class="slider-container">
               <li class="slider-item">
                 <img src="./slider-img/slider-jar.png" alt="" />
@@ -88,24 +90,28 @@
               </li>
             </ul>
 
-            <div class="swiper">
+            <div class="swiper slider-container">
               <!-- Additional required wrapper -->
-              <div class="swiper-wrapper">
+              <div class="swiper-wrapper ">
                 <!-- Slides -->
-                <div class="swiper-slide">Slide 1</div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
-                ...
+                <div class="swiper-slide slider-item">
+                <img src="./slider-img/slider-jar.png" alt="" />
+                <p class="slider-text">формування пасивного грошового потоку</p>
               </div>
-              <!-- If we need pagination -->
-              <div class="swiper-pagination"></div>
-            
-              <!-- If we need navigation buttons -->
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-            
-              <!-- If we need scrollbar -->
-              <div class="swiper-scrollbar"></div>
+              <div class="swiper-slide slider-item">
+                <img src="./slider-img/slider-plant.png" alt="" />
+                <p class="slider-text">інвестування і управління активами</p>
+              </div>
+              <div class="swiper-slide slider-item">
+                <img src="./slider-img/slider-bag.png" alt="" />
+                <p class="slider-text">кредитно-фінансові відносини</p>
+              </div>
+              <div class="swiper-slide slider-item">
+                <img src="./slider-img/slider-bag.png" alt="" />
+                <p class="slider-text">кредитно-фінансові відносини</p>
+              </div>
+              </div>
+
             </div>
 
             <div class="buttons-group">
@@ -531,7 +537,7 @@
         <div class="container">
           <h2 class="rules-title">Як грати у гру?</h2>
           <div class="rules-wrapper">
-            <video class="rules-video" src="./ game-rules.mp4" controls poster="./poster.png"></video></video>
+            <video class="rules-video" src="./game-rules.mp4" controls poster="./poster.png"></video></video>
            <ul class="goals-wrapper">
            
             <li class="goal">
@@ -678,10 +684,11 @@
           </div>
         </div>
       </section>
-      <script src="./script.js">
-       
-      </script>
-    </main>
-    <footer class="footer"></footer>
+ </main>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./script.js"></script>
   </body>
+  <footer class="footer"></footer>
 </html>
