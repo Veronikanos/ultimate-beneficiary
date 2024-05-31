@@ -734,6 +734,10 @@ h3,
   text-decoration: underline;
 }
 
+.option-link-pdf {
+  margin-right: 39px;
+}
+
 .service-option input {
   position: absolute;
   z-index: -1;
@@ -864,8 +868,10 @@ video.rules-video {
   display: flex;
   flex-direction: column;
   gap: 76px;
+  padding-top: 10px;
   @media screen and (min-width: 1440px) {
     gap: 49px;
+    padding-top: 0;
   }
 }
 
@@ -874,6 +880,20 @@ video.rules-video {
   @media screen and (min-width: 1440px) {
     max-width: none;
   }
+}
+
+.goal.goal-rules {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding-bottom: 35px;
+  @media screen and (min-width: 1440px) {
+    display: block;
+  }
+}
+
+.goal.goal-rules .option-link {
+  font-size: 15px;
 }
 
 .goal-title {
