@@ -45,30 +45,47 @@ function rotateLogo() {
 
 // SLIDER HERO
 
-const swiper = new Swiper(".swiper", {
-  // Optional parameters
-  // direction: "vertical",
-  loop: true,
-  autoplay: {
-    delay: 2000,
-    disableOnInteraction: false,
-    pauseOnMouseEnter: true,
-  },
-  // If we need pagination
-  // pagination: {
-  //   el: ".swiper-pagination",
-  // },
+function initializeSwiper() {
+  if (window.innerWidth < 1440) {
+    const swiper = new Swiper(".swiper", {
+      // Optional parameters
+      // direction: "vertical",
+      loop: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      // If we need pagination
+      // pagination: {
+      //   el: ".swiper-pagination",
+      // },
 
-  // Navigation arrows
-  // navigation: {
-  //   nextEl: ".swiper-button-next",
-  //   prevEl: ".swiper-button-prev",
-  // },
+      // Navigation arrows
+      // navigation: {
+      //   nextEl: ".swiper-button-next",
+      //   prevEl: ".swiper-button-prev",
+      // },
 
-  // And if we need scrollbar
-  // scrollbar: {
-  //   el: ".swiper-scrollbar",
-  // },
+      // And if we need scrollbar
+      // scrollbar: {
+      //   el: ".swiper-scrollbar",
+      // },
+    });
+  }
+}
+
+window.addEventListener("resize", function () {
+  if (window.innerWidth >= 1440) {
+    if (swiper !== undefined) swiper.destroy(true, true);
+  } else {
+    initializeSwiper();
+  }
 });
 
-document.addEventListener("DOMContentLoaded", changeHeroImage(), rotateLogo());
+document.addEventListener(
+  "DOMContentLoaded",
+  changeHeroImage(),
+  rotateLogo(),
+  initializeSwiper()
+);
