@@ -882,6 +882,9 @@ video.rules-video {
     margin-bottom: 0;
   }
 }
+.goal-title.goal-rules-header {
+  margin-bottom: 20px;
+}
 
 .goal-subtitle {
   font-size: 20px;
