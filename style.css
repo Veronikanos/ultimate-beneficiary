@@ -163,6 +163,20 @@ nav {
   }
 }
 
+.compas-wrapper {
+  width: 375px;
+  height: 375px;
+  position: absolute;
+  top: 0;
+  /* left: 0; */
+  margin: 0 auto;
+  @media screen and (min-width: 1440px) {
+    width: 781px;
+    height: 772px;
+    right: 0;
+  }
+}
+
 .hero-wrapper {
   display: flex;
   flex-direction: column;
@@ -189,11 +203,14 @@ nav {
 
 .rotate-animation {
   position: absolute;
+  width: 375px;
   top: 20px;
-  z-index: -1;
+  transform: translateX(50%);
   transition: transform 1s ease; /* Анімація для transform з тривалістю 1 секунда та легким згладжуванням */
   @media screen and (min-width: 1440px) {
-    width: 781px;
+    width: 755px;
+    right: -50px;
+    top: 50px;
   }
 }
 
@@ -1012,10 +1029,16 @@ video.rules-video {
 
 .author-about:first-of-type {
   margin-top: 32px;
+  @media screen and (min-width: 1440px) {
+    margin-top: 0;
+  }
 }
 
 .author-about:last-of-type {
   margin-bottom: 62px;
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 0;
+  }
 }
 
 .work-description {
@@ -1117,12 +1140,13 @@ video.rules-video {
 .author-book {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   text-align: center;
   grid-column: span 2;
   gap: 21px;
   @media screen and (min-width: 1440px) {
     flex-direction: column;
+    justify-content: space-between;
     grid-column: span 1;
     gap: 0;
   }
