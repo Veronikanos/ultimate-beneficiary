@@ -17,20 +17,24 @@ function changeHeroImage() {
 
 function rotateLogo() {
   var image = document.getElementById("rotatedLogo");
-  var rotationDirection = 1; // Напрямок обертання: 1 - вправо, -1 - вліво
-  var rotationAngle = 90; // Кут обертання
-  var currentRotation = 0; // Поточний кут обертання
+  var currentRotation = 0; // Current angle of rotation
+  var rotating = false; // State to manage rotation direction
 
   setInterval(function () {
-    // Зміна напрямку обертання
-    rotationDirection *= -1;
-    // Обчислення нового кута обертання
-    var newRotation = currentRotation + rotationDirection * rotationAngle;
-    // Застосування обертання до зображення
-    image.style.transform = "rotate(" + newRotation + "deg)";
-    // Оновлення поточного кута обертання
-    currentRotation = newRotation;
-  }, 3000); // змінює кут обертання кожні 3 секунди
+    if (!rotating) {
+      // Rotate to 90 degrees
+      currentRotation = 90;
+      image.style.transition = "transform 0.3s ease-in-out";
+    } else {
+      // Rotate back to 0 degrees
+      currentRotation = 0;
+      image.style.transition = "transform 0.3s ease-in-out";
+    }
+    // Apply the rotation
+    image.style.transform =
+      "translate(-50%, -50%) rotate(" + currentRotation + "deg)";
+    rotating = !rotating; // Toggle rotation state
+  }, 3000); // Change rotation every 3.3 seconds to include pause time
 
   // YOUTUBE VIDEO PLAYS
   var cover = document.getElementById("video-cover");
