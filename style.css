@@ -105,7 +105,7 @@ header {
   position: fixed;
   padding-top: 24px;
   padding-bottom: 24px;
-  z-index: 10;
+  z-index: 100;
   background: linear-gradient(black, transparent);
   @media screen and (min-width: 1440px) {
     padding-top: 29px;
@@ -295,7 +295,7 @@ h3,
   }
 }
 
-.slider-container {
+.slider-container.hero-slider__container {
   width: 100%;
   margin-bottom: 52px;
   @media screen and (min-width: 1440px) {
@@ -306,7 +306,7 @@ h3,
   }
 }
 
-.slider-item {
+.slider-item.hero-slider-item {
   width: 303px;
   height: 78px;
   display: flex;
@@ -1248,7 +1248,7 @@ video.rules-video {
   }
 }
 
-.swiper-slide {
+.swiper-slide.hero-swiper-slide {
   @media screen and (min-width: 1440px) {
     width: auto !important;
   }
