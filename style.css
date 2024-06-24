@@ -163,19 +163,13 @@ nav {
   }
 }
 
-.compas-wrapper {
+/* .compas-wrapper {
   width: 375px;
   height: 375px;
   position: absolute;
   top: 0;
-  /* left: 0; */
   margin: 0 auto;
-  @media screen and (min-width: 1440px) {
-    width: 781px;
-    height: 772px;
-    right: 0;
-  }
-}
+} */
 
 .hero-wrapper {
   display: flex;
