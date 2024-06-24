@@ -77,6 +77,32 @@ function initializeSwiper() {
       // },
     });
   }
+
+  const swiperTestimonials = new Swiper(".swiper-testimonials", {
+    // Optional parameters
+    // direction: "vertical",
+    loop: true,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+    // If we need pagination
+    // pagination: {
+    //   el: ".swiper-pagination",
+    // },
+
+    // Navigation arrows
+    // navigation: {
+    //   nextEl: ".swiper-button-next",
+    //   prevEl: ".swiper-button-prev",
+    // },
+
+    // And if we need scrollbar
+    // scrollbar: {
+    //   el: ".swiper-scrollbar",
+    // },
+  });
 }
 
 window.addEventListener("resize", function () {
