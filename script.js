@@ -1,3 +1,6 @@
+let heroSwiper = null;
+let testimonialsSwiper = null;
+
 function changeHeroImage() {
   var image1 = document.getElementById("image1");
   var image2 = document.getElementById("image2");
@@ -40,8 +43,9 @@ function rotateLogo() {
 // SLIDER HERO
 
 function initializeHeroSwiper() {
-  if (window.innerWidth < 1440) {
-    new Swiper(".swiper-hero", {
+  if (!heroSwiper && window.innerWidth < 1440) {
+    // console.log("Initializing hero Swiper");
+    heroSwiper = new Swiper(".swiper-hero", {
       loop: true,
       autoplay: {
         delay: 2000,
@@ -53,32 +57,50 @@ function initializeHeroSwiper() {
 }
 
 function initializeTestimonialsSwiper() {
-  new Swiper(".swiper-testimonials", {
-    direction: "vertical",
-    loop: true,
-    // autoplay: {
-    //   delay: 2000,
-    //   disableOnInteraction: false,
-    //   pauseOnMouseEnter: true,
-    // },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
+  if (!testimonialsSwiper && window.innerWidth < 1440) {
+    // console.log("Initializing testimonials Swiper");
+    testimonialsSwiper = new Swiper(".swiper-testimonials", {
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  }
+}
+
+function destroySwipers() {
+  if (heroSwiper && window.innerWidth >= 1440) {
+    if (heroSwiper) {
+      // console.log("Destroying hero Swiper");
+      heroSwiper.destroy(true, true);
+      heroSwiper = null;
+    }
+    if (testimonialsSwiper && testimonialsSwiper) {
+      console.log("Destroying testimonials Swiper");
+      testimonialsSwiper.destroy(true, true);
+      testimonialsSwiper = null;
+    }
+  }
 }
 
 window.addEventListener("resize", function () {
-  if (window.innerWidth >= 1440) {
-    if (swiper !== undefined) swiper.destroy(true, true);
-  } else {
-    initializeSwiper();
-  }
+  // console.log("Resizing window: ", window.innerWidth);
+
+  if (window.innerWidth < 1440) {
+    initializeHeroSwiper();
+    initializeTestimonialsSwiper();
+  } else destroySwipers();
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  changeHeroImage(),
-    rotateLogo(),
-    initializeHeroSwiper(),
+document.addEventListener("DOMContentLoaded", function () {
+  // console.log("DOM content loaded");
+
+  changeHeroImage();
+  rotateLogo();
+  if (window.innerWidth < 1440) {
+    console.log(" window: ", window.innerWidth);
+    initializeHeroSwiper();
     initializeTestimonialsSwiper();
+  }
 });

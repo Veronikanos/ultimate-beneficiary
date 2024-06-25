@@ -1,3 +1,7 @@
+:root {
+  --swiper-navigation-top-offset: 94%;
+  --swiper-navigation-color: #f0dfa1;
+}
 *,
 *:before,
 *:after {
@@ -28,6 +32,7 @@ html {
 
 body {
   margin: 0;
+  overflow-x: hidden;
   /* position: relative; */
 }
 
@@ -86,8 +91,7 @@ section {
 .container {
   width: 100%;
   max-width: 350px;
-  padding-right: 20px;
-  padding-left: 20px;
+
   margin: 0 auto;
   /* overflow-x: hidden; */
   @media screen and (min-width: 420px) {
@@ -100,6 +104,11 @@ section {
   @media screen and (min-width: 1440px) {
     max-width: 1225px;
   }
+}
+
+.thin-container {
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 header {
@@ -301,6 +310,10 @@ h3,
   }
 }
 
+.slider-container {
+  width: 100%;
+}
+
 .slider-container.hero-slider__container {
   width: 100%;
   margin-bottom: 52px;
@@ -312,7 +325,7 @@ h3,
   }
 }
 
-.slider-item.hero-slider-item {
+.slider-item {
   width: 303px;
   height: 78px;
   display: flex;
@@ -520,6 +533,10 @@ h3,
 }
 
 .cards {
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
   @media screen and (min-width: 1440px) {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -536,6 +553,9 @@ h3,
 }
 
 .card-item {
+  @media screen and (min-width: 768px) {
+    width: 294px;
+  }
   @media screen and (min-width: 1440px) {
     width: 212px;
   }
@@ -558,6 +578,9 @@ h3,
   padding-bottom: 19px;
   color: black;
   border-radius: 4px;
+  @media screen and (min-width: 768px) {
+    height: 105px;
+  }
   @media screen and (min-width: 1440px) {
     height: 76px;
     padding: 0 10px;
@@ -601,7 +624,7 @@ h3,
   justify-content: center;
   align-items: center;
   grid-row: span 2;
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 768px) {
     width: 100%;
     height: 138px;
   }
@@ -616,7 +639,7 @@ h3,
   padding: 20px 10px;
 
   justify-content: space-between;
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 768px) {
     display: flex;
     /* height: 255px; */
     flex-direction: column;
@@ -628,8 +651,8 @@ h3,
 
 .card-text {
   margin-bottom: 19px;
-  max-width: 230px;
-  @media screen and (min-width: 1440px) {
+  max-width: 225px;
+  @media screen and (min-width: 768px) {
     font-size: 13px;
     margin-bottom: 0;
     text-align: center;
@@ -1249,6 +1272,10 @@ video.rules-video {
 .swiper-slide {
   flex-shrink: 0;
   width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .swiper-wrapper.shining {
@@ -1267,4 +1294,114 @@ video.rules-video {
   @media screen and (min-width: 1440px) {
     width: auto !important;
   }
+}
+
+.swiper-testimonials {
+  max-width: 276px;
+  @media screen and (min-width: 768px) {
+    max-width: 508px;
+  }
+}
+
+.swiper-testimonials .swiper-button-next {
+  right: 0;
+}
+
+.swiper-testimonials .swiper-button-prev {
+  left: 0;
+}
+
+.swiper-testimonials .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+  gap: 20px;
+}
+
+.author-testimonial {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.author-testimonial__image {
+  align-self: flex-end;
+  display: flex;
+  width: 54px;
+  height: 54px;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+}
+
+.testimonial-author-wrapper {
+  /* margin-top: 31px; */
+}
+
+.testimonial-author__name {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 150%;
+  color: rgba(240, 223, 161, 1);
+}
+
+.testimonial-author__about {
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 150%;
+  color: rgba(240, 223, 161, 1);
+}
+
+/* CONTACTS */
+
+.contacts-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  @media screen and (min-width: 1440px) {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+
+.contacts-wrapper .game-button {
+  width: fit-content;
+  padding-left: 38px;
+  padding-right: 38px;
+}
+
+/* FOOTER */
+
+.footer {
+  padding-bottom: 100px;
+}
+
+.payment-methods {
+  display: flex;
+  justify-content: space-between;
+  height: 35px;
+  margin-bottom: 21px;
+  @media screen and (min-width: 768px) {
+    height: 66px;
+  }
+  @media screen and (min-width: 1440px) {
+    justify-content: flex-start;
+    height: 50px;
+  }
+}
+
+.copyright {
+}
+
+.copyright p,
+.copyright a {
+  font-size: 10px;
+  color: #cacaca;
 }

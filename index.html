@@ -30,8 +30,8 @@
             <li class="nav-menu-item">
               <a href="#author">Про автора</a>
               </li>
-            <li class="nav-menu-item">Відгуки</li>
-            <li class="nav-menu-item">Контакти</li>
+            <li class="nav-menu-item"><a href="#testimonials">Відгуки</a> </li>
+            <li class="nav-menu-item"><a href="#contacts">Контакти</a></li>
           </ul>
         </nav>
       </div>
@@ -162,7 +162,7 @@
         </div>
       </section>
       <section class="benefits" id="benefits">
-        <div class="container">
+        <div class="container thin-container">
           <h2>У чому переваги?</h2>
           <p class="benefits-text">
             Кінцевий бенефіціар має унікальні ігрові механіки
@@ -523,7 +523,7 @@
         </div>
       </section>
       <section class="rules" id="rules">
-        <div class="container">
+        <div class="container thin-container">
           <h2 class="rules-title">Як грати у гру?</h2>
           <div class="rules-wrapper">
             <video class="rules-video" src="./game-rules.mp4" controls poster="./poster.png"></video></video>
@@ -580,7 +580,7 @@
               <source srcset="./author-photo-desktop.png" media="(min-width: 1440px)">
               <img src="./author-photo-mobile.png" alt="Author Photo">
             </picture>
-            <!-- <div class="author-contacts"> -->
+          
               <h3 class="author-name">Роман Кузюк</h3>
               <ul class="social-list">
                 <li><a class="instagram" href="#">
@@ -673,32 +673,99 @@
           </div>
         </div>
       </section>
-      <section class="testimonials">
+      <section class="testimonials" id="testimonials">
         <div class="container">
           <h2>Відгуки</h2>
-           <div class="swiper swiper-testimonials swiper-container">
+           <div class="swiper swiper-testimonials slider-container">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  Продуманная механика, отличный образовательный и развивающий потенциал, большая вариативность и реиграбельность, приближенность к нашим бизнес-реалиям - все это мотивирует думать, просчитывать наперед и каждый пять минут задавать себе вопрос "Так может все-таки пора открывать свое дело?"
+                <div class="testimonial-text">
+                  Гра чудова, як на мене! Реально дає можливість відчути азарт від пошуку можливостей придбати актив для бізнесу чи інвестиції заради примноження капіталу. Механіка гри спонукає до комунікативності між учасниками, що є великим плюсом у тренуванні навичок ведення переговорів. 
+                  І що саме цікаво під час гри гравці, що казали "ми не тямимо в фінансах", доволі швидко стали потужними інвесторами і стрімко пішли у напрямку реєстрації Холдингу. Як то кажуть результат просвітницької місії очевидний! Автор гри великий молодчага!
+              
                 </div>
-                <div class="swiper-slide">
+                <div class="author-testimonial">
+                <img class="author-testimonial__image" src="./author-photo-mobile.png" alt="">
+          <div class="testimonial-author-wrapper">  
+            <div class="testimonial-author__name">ANDRIY GO</div>
+            <div class="testimonial-author__about">Хто такий і звідки</div>
+           </div>  
+           </div>
+          </div> 
+              <div class="swiper-slide">
+            <div class="testimonial-text">
                   Прекрасная образовательная игра. Все что вы хотели знать о принципах экономики и финансовой системе легко и доступно. И весьма глубоко. Рекомендую!
                 </div>
+            
+                <div class="author-testimonial">
+                  <img class="author-testimonial__image" src="./author-photo-mobile.png" alt="">
+            <div class="testimonial-author-wrapper">  
+              <div class="testimonial-author__name">Олександр Кульвановський</div>
+              <div class="testimonial-author__about">Хто такий і звідки</div>
+             </div>  
+             </div>
+             </div>
                 <div class="swiper-slide">
-                  Мне интересна эта игра. Понравилась и рекомендую друзьям. Жду продаж\)\\)\
-                </div>
+                  <div class="testimonial-text">
+                   Мне интересна эта игра. Понравилась и рекомендую друзьям. Жду продаж))
+                  </div>
+                     <div class="author-testimonial">
+                    <img class="author-testimonial__image" src="./author-photo-mobile.png" alt="">
+              <div class="testimonial-author-wrapper">  
+                <div class="testimonial-author__name">Наталія Пешкова</div>
+                <div class="testimonial-author__about">Хто такий і звідки</div>
+               </div>  
+               </div>
+              </div>
                 <div class="swiper-slide">
-                  ggwaood
-                </div>
-                <div class="swiper-slide">
-                  googrd
+                  <div class="testimonial-text"> Продуманная механика, отличный образовательный и развивающий потенциал, большая вариативность и реиграбельность, приближенность к нашим бизнес-реалиям - все это мотивирует думать, просчитывать наперед и каждый пять минут задавать себе вопрос "Так может все-таки пора открывать свое дело?"
+                  </div>
+                  <div class="author-testimonial">
+                  <img class="author-testimonial__image" src="./author-photo-mobile.png" alt="">
+                  <div class="testimonial-author-wrapper">  
+                    <div class="testimonial-author__name">Максим Перов</div>
+                    <div class="testimonial-author__about">Хто такий і звідки</div>
+                  </div>  
                 </div>
               </div>
-              <div class="swiper-pagination"></div>
+              <div class="swiper-slide">
+                <div class="testimonial-text"> Найкращий спосіб провести свій вільний час з користю —зіграти в цю гру! Концентруючи увагу на грі, неможливо не заглибитись у процес з головою, тим самим відволікаючись від буденності. Азартним людям рекомендую!!!      </div>
+                <div class="author-testimonial">
+                <img class="author-testimonial__image" src="./author-photo-mobile.png" alt="">
+                <div class="testimonial-author-wrapper">  
+                  <div class="testimonial-author__name">Юлія Постернак</div>
+                  <div class="testimonial-author__about">Хто такий і звідки</div>
+                </div>  
+              </div>
+            </div>                <div class="swiper-slide">
+              <div class="testimonial-text"> Крута гра — поринув у дитинство, коли грав цілими дні такі економічні ігри як менеджер та монополію, але тут все крутіше і ближче до тебе, не Гаїті з Фіджі, а ФОП, ТОВ, ПАТ і т.д.              </div>
+              <div class="author-testimonial">
+              <img class="author-testimonial__image" src="./author-photo-mobile.png" alt="">
+              <div class="testimonial-author-wrapper">  
+                <div class="testimonial-author__name">Юрій Біловус</div>
+                <div class="testimonial-author__about">Хто такий і звідки</div>
+              </div>  
+            </div>
+          </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
           </div> 
 
         </div>
       </section>
+
+      <section class="contacts" id="contacts">
+        <div class="container">
+        <h2>Залишилися запитання?</h2>
+        <div class="contacts-wrapper">
+        <a href="" class="game-button">Кінцевий бенефіціар</a>
+      <a class="game-button" href="tel:+380509021222">+380509021222</a>
+
+      <a class="game-button" href="https://t.me/timujyn38">@timujyn38</a>
+    </div>
+  </div>
+    </section>
 
 
       
@@ -708,5 +775,18 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="./script.js"></script>
   </body>
-  <footer class="footer"></footer>
+  <footer class="footer">
+    <div class="container thin-container">
+    <div class="payment-methods">
+      <img src="./footer-visa.png" alt="">
+      <img src="./footer-mastercard.png" alt="">
+      <img src="./footer-pumb.png" alt="">
+    </div>
+    <div class="copyright">
+      <p>ТОВ "Кінцевий Бенефіціар" ©2024. Усі права захищено</p>
+      <a href="">Правила та Умови</a>
+      <a href="">Політика конфіденційності</a></p>
+    </div>
+  </div>
+  </footer>
 </html>
