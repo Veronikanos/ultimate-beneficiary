@@ -159,16 +159,39 @@ nav {
 
 .nav-menu {
   display: none;
+  flex-direction: column;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 10px;
+  z-index: 1000;
+
   @media screen and (min-width: 1280px) {
     display: flex;
     gap: 73px;
     text-transform: uppercase;
+    flex-direction: row;
+    position: static;
+    background-color: transparent;
+    width: auto;
+    padding: 0;
   }
+}
+
+.nav-menu.active {
+  display: flex;
 }
 
 .nav-menu-item {
   cursor: pointer;
   transition: color 0.3s ease-in-out;
+  margin-bottom: 10px;
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 0;
+  }
 }
 
 .nav-menu-item:hover,

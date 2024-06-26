@@ -1,6 +1,22 @@
 let heroSwiper = null;
 let testimonialsSwiper = null;
 
+function toggleMobileMenu() {
+  const menuButton = document.querySelector("#navMenuButton");
+  const mobileMenu = document.querySelector("#navMenu");
+  const menuLinks = mobileMenu.querySelectorAll("a");
+
+  menuButton.addEventListener("click", function () {
+    mobileMenu.classList.toggle("active");
+  });
+
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", function () {
+      mobileMenu.classList.remove("active");
+    });
+  });
+}
+
 function changeHeroImage() {
   var image1 = document.getElementById("image1");
   var image2 = document.getElementById("image2");
@@ -95,7 +111,7 @@ window.addEventListener("resize", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   // console.log("DOM content loaded");
-
+  toggleMobileMenu();
   changeHeroImage();
   rotateLogo();
   if (window.innerWidth < 1280) {
