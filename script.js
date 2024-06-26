@@ -43,7 +43,7 @@ function rotateLogo() {
 // SLIDER HERO
 
 function initializeHeroSwiper() {
-  if (!heroSwiper && window.innerWidth < 1440) {
+  if (!heroSwiper && window.innerWidth < 1280) {
     // console.log("Initializing hero Swiper");
     heroSwiper = new Swiper(".swiper-hero", {
       loop: true,
@@ -57,7 +57,7 @@ function initializeHeroSwiper() {
 }
 
 function initializeTestimonialsSwiper() {
-  if (!testimonialsSwiper && window.innerWidth < 1440) {
+  if (!testimonialsSwiper && window.innerWidth < 1280) {
     // console.log("Initializing testimonials Swiper");
     testimonialsSwiper = new Swiper(".swiper-testimonials", {
       loop: true,
@@ -70,7 +70,7 @@ function initializeTestimonialsSwiper() {
 }
 
 function destroySwipers() {
-  if (heroSwiper && window.innerWidth >= 1440) {
+  if (heroSwiper && window.innerWidth >= 1280) {
     if (heroSwiper) {
       // console.log("Destroying hero Swiper");
       heroSwiper.destroy(true, true);
@@ -87,7 +87,7 @@ function destroySwipers() {
 window.addEventListener("resize", function () {
   // console.log("Resizing window: ", window.innerWidth);
 
-  if (window.innerWidth < 1440) {
+  if (window.innerWidth < 1280) {
     initializeHeroSwiper();
     initializeTestimonialsSwiper();
   } else destroySwipers();
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   changeHeroImage();
   rotateLogo();
-  if (window.innerWidth < 1440) {
+  if (window.innerWidth < 1280) {
     console.log(" window: ", window.innerWidth);
     initializeHeroSwiper();
     initializeTestimonialsSwiper();
