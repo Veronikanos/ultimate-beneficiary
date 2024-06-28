@@ -36,13 +36,13 @@ function changeHeroImage() {
 
 function rotateLogo() {
   // // YOUTUBE VIDEO PLAYS
-  // var cover = document.getElementById("video-cover");
-  // var video = document.getElementById("video");
-  // cover.addEventListener("click", function () {
-  //   cover.style.display = "none";
-  //   video.style.display = "block";
-  //   video.src += "?autoplay=1"; // Automatically start the video
-  // });
+  var cover = document.getElementById("video-cover");
+  var video = document.getElementById("video");
+  cover.addEventListener("click", function () {
+    cover.style.display = "none";
+    video.style.display = "block";
+    video.src += "?autoplay=1"; // Automatically start the video
+  });
 
   const compass = document.getElementById("rotatedLogo");
   let currentRotation = 0;
@@ -53,7 +53,7 @@ function rotateLogo() {
     currentRotation = rotating ? 90 : 0;
     compass.style.transition = "transform 0.3s ease-in-out";
     compass.style.transform = `translate(-50%, -50%) rotate(${currentRotation}deg)`;
-  }, 3300);
+  }, 3000);
 }
 
 // SLIDER HERO
