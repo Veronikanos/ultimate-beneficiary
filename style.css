@@ -70,6 +70,15 @@ p {
   font-size: 17px;
   line-height: 150%;
   letter-spacing: -0.2px;
+  font-weight: 300;
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+    line-height: 130%;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 17px;
+    line-height: 150%;
+  }
 }
 
 .game-page {
@@ -129,6 +138,9 @@ header {
 
 .logo {
   display: block;
+  @media screen and (min-width: 768px) {
+    width: 72px;
+  }
 }
 
 nav {
@@ -149,6 +161,9 @@ nav {
   transition: color 0.3s ease-in-out;
   cursor: pointer;
   z-index: 9999;
+  @media screen and (min-width: 768px) {
+    font-size: 30px;
+  }
   @media screen and (min-width: 1280px) {
     display: none;
   }
@@ -278,6 +293,9 @@ h1 {
   font-weight: 700;
   text-align: center;
   margin-bottom: 11px;
+  @media screen and (min-width: 768px) {
+    font-size: 90px;
+  }
   @media screen and (min-width: 1280px) {
     margin-bottom: 60px;
     font-size: 64px;
@@ -321,11 +339,19 @@ h3,
   line-height: 110%;
   margin-bottom: 40px;
   text-transform: none;
+  @media screen and (min-width: 768px) {
+    font-size: 35px;
+    margin-bottom: 49px;
+    max-width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+  }
   @media screen and (min-width: 1280px) {
     order: -1;
     padding-top: 208px;
     margin-bottom: 10px;
     font-size: 25px;
+    max-width: none;
   }
 }
 
@@ -365,6 +391,11 @@ h3,
   border-radius: 14px;
   box-shadow: 0px 2px 25.8px 0px rgba(240, 223, 161, 0.3);
   margin: 0 auto;
+
+  @media screen and (min-width: 768px) {
+    width: 488px;
+    justify-content: space-around;
+  }
 
   @media screen and (min-width: 1280px) {
     width: 235px;
@@ -1427,6 +1458,10 @@ video.rules-video {
   max-width: 313px;
   margin: 0 auto;
   text-align: center;
+  /* @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1280px) {
+  } */
 }
 
 .swiper {
@@ -1451,6 +1486,10 @@ video.rules-video {
 .swiper-wrapper.shining {
   padding-top: 15px;
   padding-bottom: 15px;
+  @media screen and (min-width: 768px) {
+    padding-top: 33px;
+    padding-bottom: 28px;
+  }
   @media screen and (min-width: 1280px) {
     flex-wrap: wrap;
     padding-top: 0;

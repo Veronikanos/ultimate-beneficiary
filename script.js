@@ -36,13 +36,13 @@ function changeHeroImage() {
 
 function rotateLogo() {
   // // YOUTUBE VIDEO PLAYS
-  var cover = document.getElementById("video-cover");
-  var video = document.getElementById("video");
-  cover.addEventListener("click", function () {
-    cover.style.display = "none";
-    video.style.display = "block";
-    video.src += "?autoplay=1"; // Automatically start the video
-  });
+  // var cover = document.getElementById("video-cover");
+  // var video = document.getElementById("video");
+  // cover.addEventListener("click", function () {
+  //   cover.style.display = "none";
+  //   video.style.display = "block";
+  //   video.src += "?autoplay=1"; // Automatically start the video
+  // });
 
   const compass = document.getElementById("rotatedLogo");
   let currentRotation = 0;
@@ -63,11 +63,11 @@ function initializeHeroSwiper() {
     // console.log("Initializing hero Swiper");
     heroSwiper = new Swiper(".swiper-hero", {
       loop: true,
-      autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-      },
+      // autoplay: {
+      //   delay: 2000,
+      //   disableOnInteraction: false,
+      //   pauseOnMouseEnter: true,
+      // },
     });
   }
 }
