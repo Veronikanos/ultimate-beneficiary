@@ -70,7 +70,7 @@ p {
   font-size: 17px;
   line-height: 150%;
   letter-spacing: -0.2px;
-  font-weight: 300;
+  /* font-weight: 300; */
   @media screen and (min-width: 768px) {
     font-size: 20px;
     line-height: 130%;
@@ -91,6 +91,10 @@ p {
 section {
   padding-bottom: 50px;
   padding-top: 50px;
+  @media screen and (min-width: 768px) {
+    padding-bottom: 100px;
+    padding-top: 100px;
+  }
   @media screen and (min-width: 1280px) {
     padding-bottom: 80px;
     padding-bottom: 80px;
@@ -156,7 +160,7 @@ nav {
   text-transform: uppercase;
   border: none;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 110%;
   transition: color 0.3s ease-in-out;
   cursor: pointer;
@@ -201,7 +205,7 @@ nav {
   height: 100vh;
   font-family: "Roboto Condensed", serif;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   padding: 90px 33px;
 }
 
@@ -290,7 +294,7 @@ h1 {
   text-transform: uppercase;
   font-family: "Roboto Condensed", serif;
   line-height: 110%;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
   margin-bottom: 11px;
   @media screen and (min-width: 768px) {
@@ -306,11 +310,14 @@ h2 {
   font-size: 42px;
   text-transform: uppercase;
   font-family: "Roboto Condensed", serif;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 110%;
   color: white;
   text-align: center;
   margin-bottom: 22px;
+  @media screen and (min-width: 768px) {
+    font-size: 70px;
+  }
   @media screen and (min-width: 1280px) {
     font-size: 55px;
     text-align: initial;
@@ -320,7 +327,7 @@ h2 {
 h3,
 .option-price {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 150%;
   font-family: "Roboto Condensed", serif;
   text-transform: uppercase;
@@ -335,7 +342,7 @@ h3,
   color: #f0dfa1;
   font-family: "Roboto Condensed", serif;
   text-align: center;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 110%;
   margin-bottom: 40px;
   text-transform: none;
@@ -395,7 +402,11 @@ h3,
 
   @media screen and (min-width: 768px) {
     width: 488px;
-    justify-content: space-around;
+    height: 113px;
+    padding-left: 62px;
+    padding-right: 62px;
+    gap: 34px;
+    /* justify-content: space-around; */
   }
 
   @media screen and (min-width: 1280px) {
@@ -417,6 +428,9 @@ h3,
 
 .slider-item img {
   height: 57px;
+  @media screen and (min-width: 768px) {
+    height: 86px;
+  }
 }
 
 .slider-text {
@@ -425,6 +439,7 @@ h3,
   align-items: center;
   height: 100%;
   position: relative;
+  line-height: 130%;
   @media screen and (min-width: 1280px) {
     font-size: 15px;
   }
@@ -437,13 +452,13 @@ h3,
 }
 
 .game-button {
-  width: 163px;
+  width: 149px;
   text-transform: uppercase;
   border: #f0dfa1 3px solid;
   background-color: transparent;
   font-family: "Roboto Condensed", serif;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   border-radius: 4px;
   text-align: center;
   color: #f0dfa1;
@@ -452,6 +467,9 @@ h3,
   transition-property: color, background-color, border-color;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
+  @media screen and (min-width: 768px) {
+    width: 239px;
+  }
   @media screen and (min-width: 1280px) {
     width: 278px;
   }
@@ -482,6 +500,10 @@ h3,
 /* about section */
 
 .title-wrapper {
+  margin-bottom: 61px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 65px;
+  }
   @media screen and (min-width: 1280px) {
     display: flex;
     justify-content: space-between;
@@ -493,6 +515,11 @@ h3,
   align-items: center;
   gap: 56px;
   justify-content: center;
+  font-family: "Roboto Condensed", serif;
+  font-weight: 600;
+  @media screen and (min-width: 768px) {
+    font-size: 30px;
+  }
   @media screen and (min-width: 1280px) {
     font-size: 25px;
   }
@@ -524,10 +551,12 @@ h3,
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 48px;
   @media screen and (min-width: 768px) {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /* gap: 0px; */
+    grid-template-columns: 296px auto;
+    column-gap: 25px;
+    row-gap: 63px;
   }
   @media screen and (min-width: 1280px) {
     display: flex;
@@ -544,7 +573,13 @@ h3,
   align-items: center;
   text-align: center;
   position: relative;
-  margin-top: 48px;
+  /* margin-top: 48px; */
+}
+
+.audience__military p {
+  @media screen and (min-width: 768px) {
+    width: 170px;
+  }
 }
 
 .audience li::before {
@@ -557,7 +592,12 @@ h3,
 }
 
 .audience-title {
-  padding-top: 140px;
+  padding-top: 145px;
+  @media screen and (min-width: 768px) {
+    line-height: 110%;
+    font-size: 26px;
+    margin-bottom: 13px;
+  }
 }
 
 /* benefits section */
@@ -570,7 +610,7 @@ h3,
 
 .benefits-text {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 150%;
   font-family: "Roboto Condensed", serif;
   color: #f0dfa1;
@@ -639,9 +679,9 @@ h3,
   display: flex;
   justify-content: center;
   align-items: center;
-
+  height: 55px;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   font-family: "Roboto Condensed", serif;
   line-height: 110%;
   text-align: center;
@@ -728,6 +768,7 @@ h3,
 .card-text {
   margin-bottom: 19px;
   max-width: 225px;
+  line-height: 120%;
   @media screen and (min-width: 768px) {
     font-size: 13px;
     margin-bottom: 0;
@@ -830,14 +871,14 @@ h3,
 
 .service-option-name {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   font-family: "Roboto Condensed", serif;
   margin-bottom: 8px;
 }
 
 .option-language {
   font-size: 17px;
-  font-weight: 700;
+  font-weight: 600;
   display: block;
   position: relative;
   @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -1055,7 +1096,7 @@ video.rules-video {
 
 .goal-subtitle {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 150%;
   margin-bottom: 30px;
   font-family: "Roboto Condensed", serif;
@@ -1218,7 +1259,7 @@ video.rules-video {
   @media screen and (min-width: 1280px) {
     grid-column: span 1;
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
     margin-top: 0;
   }
 }
