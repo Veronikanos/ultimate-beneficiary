@@ -405,7 +405,7 @@ h3,
   }
 }
 
-.slider-item {
+.slider-item.hero-slider-item {
   width: 303px;
   height: 78px;
   display: flex;
@@ -423,16 +423,20 @@ h3,
     padding-left: 62px;
     padding-right: 62px;
     gap: 34px;
+
     /* justify-content: space-around; */
   }
 
   @media screen and (min-width: 1280px) {
+    /* display: block; */
     width: 235px;
     margin: 0;
     box-shadow: none;
     border: none;
     padding-left: 0;
     padding-right: 0;
+    height: auto;
+    gap: 20px;
   }
 }
 
@@ -448,6 +452,9 @@ h3,
   @media screen and (min-width: 768px) {
     height: 86px;
   }
+  @media screen and (min-width: 1280px) {
+    height: 48px;
+  }
 }
 
 .slider-text {
@@ -459,6 +466,9 @@ h3,
   line-height: 130%;
   @media screen and (min-width: 1280px) {
     font-size: 15px;
+    line-height: 150%;
+
+    /* flex-basis: 180px; */
   }
 }
 
@@ -516,6 +526,12 @@ h3,
 
 /* about section */
 
+.about .container {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    max-width: 660px;
+  }
+}
+
 .title-wrapper {
   margin-bottom: 61px;
   @media screen and (min-width: 768px) {
@@ -572,14 +588,13 @@ h3,
   @media screen and (min-width: 768px) {
     display: grid;
     grid-template-columns: 296px auto;
-    column-gap: 25px;
+    column-gap: 50px;
     row-gap: 63px;
   }
   @media screen and (min-width: 1280px) {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 70px;
+    row-gap: 77px;
   }
 }
 
@@ -591,11 +606,21 @@ h3,
   text-align: center;
   position: relative;
   /* margin-top: 48px; */
+  @media screen and (min-width: 1280px) {
+    max-width: fit-content;
+  }
+}
+
+.audience__military {
+  margin: 0 auto;
 }
 
 .audience__military p {
   @media screen and (min-width: 768px) {
     width: 170px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 250px;
   }
 }
 
@@ -1600,7 +1625,7 @@ video.rules-video {
     padding-bottom: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 22åpx;
+    gap: 22px;
   }
 }
 
