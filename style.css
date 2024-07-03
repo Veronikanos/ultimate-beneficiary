@@ -1,5 +1,5 @@
 :root {
-  --swiper-navigation-top-offset: 94%;
+  /* --swiper-navigation-top-offset: 94%; */
   --swiper-navigation-color: #f0dfa1;
 }
 *,
@@ -324,7 +324,7 @@ h1 {
 }
 
 h2 {
-  font-size: 42px;
+  font-size: 40px;
   text-transform: uppercase;
   font-family: "Roboto Condensed", serif;
   font-weight: 600;
@@ -332,6 +332,7 @@ h2 {
   color: white;
   text-align: center;
   margin-bottom: 22px;
+  letter-spacing: -1px;
   @media screen and (min-width: 768px) {
     font-size: 70px;
   }
@@ -451,9 +452,11 @@ h3,
   height: 57px;
   @media screen and (min-width: 768px) {
     height: 86px;
+    width: 86px;
   }
   @media screen and (min-width: 1280px) {
     height: 48px;
+    width: 48px;
   }
 }
 
@@ -1636,20 +1639,25 @@ video.rules-video {
 }
 
 .swiper-testimonials {
-  max-width: 276px;
+  /* max-width: 276px; */
+  width: 100%;
+  /* gap: 100px; */
+  overflow-x: hidden;
   @media screen and (min-width: 768px) {
-    max-width: 508px;
+    /* max-width: 508px; */
   }
+}
+.swiper-testimonials .swiper-wrapper {
+  /* max-width: 350px; */
 }
 
 .swiper-testimonials .swiper-button-next {
-  right: 0;
+  /* right: 0; */
 }
 
 .swiper-testimonials .swiper-button-prev {
-  left: 0;
+  /* left: 0; */
 }
-
 .swiper-testimonials .swiper-slide {
   display: flex;
   flex-direction: column;
@@ -1658,13 +1666,48 @@ video.rules-video {
   gap: 20px;
 }
 
+.swiper-testimonials .slider-item {
+  max-width: 250px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  /* CARD EFFECT */
+
+  /* border: 3px #f0dfa1 solid;
+  padding: 10px;
+  background-color: #000000eb; */
+  /* /////////// */
+
+  @media screen and (min-width: 768px) {
+    max-width: 500px;
+    line-height: 150%;
+    font-size: 20px;
+  }
+  @media screen and (min-width: 1280px) {
+    max-width: 800px;
+  }
+}
+
+.testimonial-text {
+  margin-bottom: 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  @media screen and (min-width: 768px) {
+    /* line-height: 150%;
+    font-size: 20px; */
+  }
+}
+
 .author-testimonial {
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  /* align-items: flex-end; */
+  /* justify-content: center; */
   gap: 10px;
-  width: 100%;
-  height: 100%;
+  /* width: 100%; */
+  /* height: 100%; */
 }
 
 .author-testimonial__image {
@@ -1686,14 +1729,20 @@ video.rules-video {
   font-size: 20px;
   line-height: 150%;
   color: rgba(240, 223, 161, 1);
+  @media screen and (min-width: 768px) {
+    font-size: 30px;
+  }
 }
 
 .testimonial-author__about {
   font-family: "Roboto", sans-serif;
-  font-weight: normal;
+  font-weight: 300;
   font-size: 15px;
   line-height: 150%;
   color: rgba(240, 223, 161, 1);
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+  }
 }
 
 /* CONTACTS */
@@ -1743,4 +1792,74 @@ video.rules-video {
 .copyright a {
   font-size: 10px;
   color: #cacaca;
+}
+
+/* MODAL */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.4s;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.form-group button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+.form-group button:hover {
+  background-color: #45a049;
 }

@@ -63,26 +63,36 @@ function initializeHeroSwiper() {
     // console.log("Initializing hero Swiper");
     heroSwiper = new Swiper(".swiper-hero", {
       loop: true,
-      // autoplay: {
-      //   delay: 2000,
-      //   disableOnInteraction: false,
-      //   pauseOnMouseEnter: true,
-      // },
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
     });
   }
 }
 
 function initializeTestimonialsSwiper() {
-  if (!testimonialsSwiper && window.innerWidth < 1280) {
-    // console.log("Initializing testimonials Swiper");
-    testimonialsSwiper = new Swiper(".swiper-testimonials", {
-      loop: true,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  }
+  // if (!testimonialsSwiper && window.innerWidth < 1280) {
+  // console.log("Initializing testimonials Swiper");
+  testimonialsSwiper = new Swiper(".swiper-testimonials", {
+    loop: true,
+    // effect: "cards",
+    // autoplay: true,
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+  // }
+}
+function initializeFlipSwiper() {
+  //  console.log("Initializing flip Swiper");
+  flipSwiper = new Swiper(".swiper-flip", {
+    effect: "flip",
+    cssMode: true,
+  });
 }
 
 function destroySwipers() {
@@ -109,11 +119,65 @@ window.addEventListener("resize", function () {
   } else destroySwipers();
 });
 
+function modal() {
+  var modal = document.getElementById("myModal");
+  var btn = document.getElementById("openModalBtn");
+  var span = document.getElementsByClassName("close")[0];
+  console.log("SOMETHING WORKS!!");
+
+  btn.onclick = function () {
+    modal.style.display = "block";
+  };
+
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+
+  document
+    .getElementById("contactForm")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const telephone = document.getElementById("telephone").value;
+      const comment = document.getElementById("comment").value;
+
+      const token = "7412078159:AAHGL2DD3HiwJFxeomF5eQ63kWhrCRQ0-XA";
+      const chatId = "-1002150953194";
+      const message = `Ім'я: ${name}\nТелефон: ${telephone}\nКоментар: ${comment}`;
+
+      const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(
+        message
+      )}`;
+
+      fetch(url)
+        .then((response) => {
+          if (response.ok) {
+            alert("Message sent successfully!");
+            modal.style.display = "none";
+          } else {
+            alert("Failed to send message.");
+          }
+        })
+        .catch((error) => {
+          alert("Error occurred: " + error.message);
+        });
+    });
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   // console.log("DOM content loaded");
   toggleMobileMenu();
   changeHeroImage();
+  // initializeFlipSwiper();
   rotateLogo();
+  modal();
   if (window.innerWidth < 1280) {
     console.log(" window: ", window.innerWidth);
     initializeHeroSwiper();
