@@ -761,6 +761,11 @@ h3,
 .flip-card {
   background-color: transparent;
   perspective: 1000px;
+
+  user-select: none; /* Disable text selection */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
 }
 
 .flip-card-inner {
