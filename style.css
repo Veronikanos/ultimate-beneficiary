@@ -740,7 +740,7 @@ h3,
   right: 0%;
   width: 0px;
   height: 0px;
-  border-bottom: 30px solid #f0dfa1;
+  border-bottom: 30px solid white;
   border-right: 30px solid transparent;
   -webkit-box-shadow: -7px 7px 7px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: -7px 7px 7px rgba(0, 0, 0, 0.3);
@@ -754,7 +754,7 @@ h3,
   right: 0%;
   width: 0px;
   height: 0px;
-  border-top: 29px solid #272822;
+  border-top: 29px solid #000000;
   border-left: 29px solid transparent;
 }
 
@@ -787,9 +787,29 @@ h3,
 .flip-card-back {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 202px;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
+
+  @media screen and (min-width: 768px) {
+    height: 376px;
+  }
+  @media screen and (min-width: 1280px) {
+    height: 308px;
+  }
+}
+
+.flip-card-front,
+.flip-card-back,
+.card-title-wrapper {
+  height: 202px;
+
+  @media screen and (min-width: 768px) {
+    height: 376px;
+  }
+  @media screen and (min-width: 1280px) {
+    height: 308px;
+  }
 }
 
 /* Style the front side (fallback if image is missing) */
@@ -859,13 +879,6 @@ h3,
   background-color: #844078;
 }
 
-.card-title-wrapper {
-  /* display: flex;
-  justify-content: center;
-  align-items:center; */
-  border-bottom: black 3px solid;
-}
-
 .card-icon-container {
   display: flex;
   justify-content: center;
@@ -884,7 +897,6 @@ h3,
   background-color: #f0dfa1;
   color: black;
   padding: 20px 10px;
-
   justify-content: space-between;
   @media screen and (min-width: 768px) {
     display: flex;
