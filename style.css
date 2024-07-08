@@ -97,7 +97,7 @@ section {
   }
   @media screen and (min-width: 1280px) {
     padding-bottom: 80px;
-    padding-bottom: 80px;
+    padding-top: 80px;
   }
 }
 
@@ -135,6 +135,7 @@ header {
   top: 0;
   margin: 0;
   @media screen and (min-width: 1280px) {
+    position: static;
     padding-top: 29px;
     padding-bottom: 29px;
   }
@@ -243,7 +244,7 @@ nav {
   }
   @media screen and (min-width: 1280px) {
     align-items: flex-start;
-    padding-top: 100px;
+    padding-top: 0;
     max-width: 750px;
   }
 }
@@ -260,6 +261,7 @@ nav {
     width: 656px;
     left: auto;
     right: 0;
+    top: 120px;
   }
 }
 
@@ -2112,4 +2114,10 @@ video.rules-video {
 
 #scrollToTopBtn:hover {
   background-color: #fff;
+}
+
+@media (min-width: 1280px) {
+  #scrollToTopBtn {
+    display: block;
+  }
 }
