@@ -110,6 +110,32 @@ function destroySwipers() {
   }
 }
 
+function initScrollToTopBtn() {
+  // Get the button
+  let mybutton = document.getElementById("scrollToTopBtn");
+
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function () {
+    scrollFunction();
+  };
+
+  function scrollFunction() {
+    if (
+      document.body.scrollTop > 50 ||
+      document.documentElement.scrollTop > 50
+    ) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  mybutton.onclick = function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+}
+
 window.addEventListener("resize", function () {
   // console.log("Resizing window: ", window.innerWidth);
 
@@ -177,6 +203,7 @@ document.addEventListener("DOMContentLoaded", function () {
   changeHeroImage();
   // initializeFlipSwiper();
   rotateLogo();
+  initScrollToTopBtn();
   modal();
   if (window.innerWidth < 1280) {
     console.log(" window: ", window.innerWidth);
