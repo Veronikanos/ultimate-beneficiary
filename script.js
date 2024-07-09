@@ -77,13 +77,13 @@ function initializeTestimonialsSwiper() {
   // console.log("Initializing testimonials Swiper");
   testimonialsSwiper = new Swiper(".swiper-testimonials", {
     loop: true,
-    // effect: "cards",
-    // autoplay: true,
+    effect: "cards",
+    autoplay: true,
 
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+    // navigation: {
+    //   nextEl: ".swiper-button-next",
+    //   prevEl: ".swiper-button-prev",
+    // },
   });
   // }
 }
@@ -204,10 +204,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // initializeFlipSwiper();
   rotateLogo();
   initScrollToTopBtn();
+  // initializeTestimonialsSwiper();
   modal();
   if (window.innerWidth < 1280) {
     console.log(" window: ", window.innerWidth);
     initializeHeroSwiper();
-    initializeTestimonialsSwiper();
   }
 });
