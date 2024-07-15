@@ -83,7 +83,7 @@ function initializeTestimonialsSwiper() {
     centeredSlides: true,
     cardsEffect: {
       perSlideOffset: 10, // Space between cards in px
-      perSlideRotate: 2, // Rotation of cards in degrees
+      perSlideRotate: 1, // Rotation of cards in degrees
     },
     // autoplay: {
     //   delay: 5000,
