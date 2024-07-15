@@ -2,6 +2,8 @@
   /* --swiper-navigation-top-offset: 94%; */
   --swiper-navigation-color: #f0dfa1;
   --swiper-pagination-color: #f0dfa1;
+  --swiper-pagination-bullet-inactive-color: #ffffff;
+  --swiper-pagination-bottom: -30px;
 }
 *,
 *:before,
@@ -1862,7 +1864,7 @@ video.rules-video {
   /* max-width: 276px; */
   width: 100%;
   /* gap: 100px; */
-  overflow-x: hidden;
+  overflow: hidden;
   @media screen and (min-width: 768px) {
     /* max-width: 508px; */
   }
@@ -1897,7 +1899,7 @@ video.rules-video {
 
   border: 3px #f0dfa1 solid;
   padding: 10px 20px;
-  background-color: #000000eb;
+  background-color: #000000;
   /* /////////// */
 
   @media screen and (min-width: 768px) {

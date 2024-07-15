@@ -76,9 +76,26 @@ function initializeTestimonialsSwiper() {
   // if (!testimonialsSwiper && window.innerWidth < 1280) {
   // console.log("Initializing testimonials Swiper");
   testimonialsSwiper = new Swiper(".swiper-testimonials", {
-    loop: true,
+    // loop: true,
+    // effect: "coverflow",
+    // slidesPerView: 2,
     effect: "cards",
-    autoplay: true,
+    centeredSlides: true,
+    cardsEffect: {
+      perSlideOffset: 10, // Space between cards in px
+      perSlideRotate: 2, // Rotation of cards in degrees
+    },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+    grabCursor: true,
+    // initialSlide: 2,
+    centeredSlidesBounds: true,
+    pagination: {
+      el: ".swiper-pagination",
+    },
 
     // navigation: {
     //   nextEl: ".swiper-button-next",
@@ -204,7 +221,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // initializeFlipSwiper();
   rotateLogo();
   initScrollToTopBtn();
-  // initializeTestimonialsSwiper();
+  initializeTestimonialsSwiper();
   modal();
   if (window.innerWidth < 1280) {
     console.log(" window: ", window.innerWidth);
