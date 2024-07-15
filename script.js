@@ -78,8 +78,8 @@ function initializeTestimonialsSwiper() {
   testimonialsSwiper = new Swiper(".swiper-testimonials", {
     // loop: true,
     // effect: "coverflow",
-    // slidesPerView: 2,
-    effect: "cards",
+    // slidesPerView: 4,
+    // effect: "cards",
     centeredSlides: true,
     cardsEffect: {
       perSlideOffset: 10, // Space between cards in px
@@ -162,26 +162,7 @@ window.addEventListener("resize", function () {
   } else destroySwipers();
 });
 
-function modal() {
-  var modal = document.getElementById("myModal");
-  var btn = document.getElementById("openModalBtn");
-  var span = document.getElementsByClassName("close")[0];
-  console.log("SOMETHING WORKS!!");
-
-  btn.onclick = function () {
-    modal.style.display = "block";
-  };
-
-  span.onclick = function () {
-    modal.style.display = "none";
-  };
-
-  window.onclick = function (event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  };
-
+function formValidation() {
   document
     .getElementById("contactForm")
     .addEventListener("submit", function (event) {
@@ -222,7 +203,8 @@ document.addEventListener("DOMContentLoaded", function () {
   rotateLogo();
   initScrollToTopBtn();
   initializeTestimonialsSwiper();
-  modal();
+  // modal();
+  formValidation();
   if (window.innerWidth < 1280) {
     console.log(" window: ", window.innerWidth);
     initializeHeroSwiper();
