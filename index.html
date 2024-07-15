@@ -588,6 +588,21 @@
                 <button class="game-button">Замовити</button>
               </div>
             </li>
+            <li class="service-card green-card">
+              <h3 class="service-card-title">Є питання?</h3>
+              <div class="service-options-wrapper">
+                <div class="service-option service-option__checked">
+                  <p class="service-option-name">
+                    Залиште заявку і ми сконтактуємо з Вами
+                  </p>
+                  <!-- <p class="option-description">
+                    Залиште заявку і ми сконтактуємо з Вами
+                  </p> -->
+                </div>
+
+                <button class="game-button">Запитати</button>
+              </div>
+            </li>
           </ul>
         </div>
       </section>
@@ -852,13 +867,32 @@
       <a class="game-button" href="tel:+380509021222">+380509021222</a>
 
       <button id="openModalBtn" class="game-button">Надішліть Ваш запит</button>
+      <h3>Надіслати заявку</h3>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">Ваше імʼя</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="telephone">Номер телефону</label>
+            <input type="tel" id="telephone" name="telephone" required>
+          </div>
+          <div class="form-group">
+            <label for="comment">Коментар</label>
+            <textarea id="comment" name="comment" rows="3"></textarea>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="game-button button-accent">Відправити заявку</button>
+          </div>
+        </form>
+     
       <!-- <a class="game-button" href="https://t.me/timujyn38">@timujyn38</a> -->
     </div>
   </div>
     </section>
 
 
-    <div id="myModal" class="modal">
+    <!-- <div id="myModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
         <h2>Contact Form</h2>
@@ -880,7 +914,7 @@
           </div>
         </form>
       </div>
-    </div>
+    </div> -->
     <button id="scrollToTopBtn" title="Go to top"></button>
  </main>
 
