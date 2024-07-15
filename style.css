@@ -1984,22 +1984,36 @@ video.rules-video {
 
 /* CONTACTS */
 
+.telegram-form {
+  @media screen and (min-width: 768px) {
+    flex-basis: 50%;
+  }
+}
+
 .contacts-container {
   display: flex;
   flex-direction: column;
   gap: 50px;
   /* flex-basis: 50%; */
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .contacts-wrapper {
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
   /* gap: 12px; */
   /* justify-content: center; */
   /* align-items: center; */
   @media screen and (min-width: 1280px) {
     /* flex-direction: row; */
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
   }
 }
 
