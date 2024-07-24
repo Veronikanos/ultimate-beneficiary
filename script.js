@@ -79,8 +79,9 @@ function initializeTestimonialsSwiper() {
     // loop: true,
     // effect: "coverflow",
     // slidesPerView: 4,
-    // effect: "cards",
+    effect: "cards",
     centeredSlides: true,
+
     cardsEffect: {
       perSlideOffset: 10, // Space between cards in px
       perSlideRotate: 1, // Rotation of cards in degrees
