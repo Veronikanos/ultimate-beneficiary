@@ -86,11 +86,11 @@ function initializeTestimonialsSwiper() {
       perSlideOffset: 10, // Space between cards in px
       perSlideRotate: 1, // Rotation of cards in degrees
     },
-    // autoplay: {
-    //   delay: 5000,
-    //   disableOnInteraction: false,
-    //   pauseOnMouseEnter: true,
-    // },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
     grabCursor: true,
     // initialSlide: 2,
     centeredSlidesBounds: true,

@@ -138,7 +138,9 @@ header {
   z-index: 100;
   background: linear-gradient(black, transparent);
   @media screen and (min-width: 1280px) {
-    position: static;
+    position: absolute;
+    top: 0;
+    left: 0;
     padding-top: 29px;
     padding-bottom: 29px;
   }
@@ -146,8 +148,9 @@ header {
 
 .logo {
   display: block;
+  width: 56px;
   @media screen and (min-width: 768px) {
-    width: 72px;
+    width: 65px;
   }
 }
 
@@ -184,6 +187,7 @@ nav {
 .nav-menu {
   display: none;
   flex-direction: column;
+  font-family: "Roboto Condensed", serif;
   background-color: #000;
   position: absolute;
   top: 0;
@@ -195,7 +199,7 @@ nav {
 
   @media screen and (min-width: 1280px) {
     display: flex;
-    gap: 73px;
+    gap: 50px;
     flex-direction: row;
     position: static;
     background-color: transparent;
@@ -228,7 +232,10 @@ nav {
 }
 
 .nav-menu-item a {
-  padding: 15px 10px;
+  padding: 50px 10px;
+  font-size: 14px;
+  font-family: "Roboto Condensed", serif;
+  font-weight: 500;
 }
 
 .hero {
@@ -236,7 +243,12 @@ nav {
 }
 
 .hero-container {
+  max-width: 375px;
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
   @media screen and (min-width: 1280px) {
+    max-width: 1280px;
     /* display: flex;
     align-items: center; */
   }
@@ -250,13 +262,16 @@ nav {
   display: flex;
   flex-direction: column;
   padding-top: 350px;
+  padding-left: 10px;
+  padding-right: 10px;
   @media screen and (min-width: 768px) {
     padding-top: 550px;
   }
   @media screen and (min-width: 1280px) {
     align-items: flex-start;
-    padding-top: 0;
-    max-width: 750px;
+    padding-top: 208px;
+    padding-left: 38px;
+    /* max-width: 760px; */
   }
 }
 .hero-img-wrapper {
@@ -271,8 +286,9 @@ nav {
     order: 1;
     width: 656px;
     left: auto;
-    right: -50px;
-    top: -75px;
+    right: -10px;
+
+    top: 120px;
   }
 }
 
@@ -344,15 +360,16 @@ h2 {
   line-height: 110%;
   color: white;
   text-align: center;
-  margin-bottom: 22px;
+  margin-bottom: 40px;
   letter-spacing: -1px;
   @media screen and (min-width: 768px) {
     font-size: 70px;
+    margin-bottom: 66px;
   }
   @media screen and (min-width: 1280px) {
     font-size: 55px;
     text-align: initial;
-    margin-bottom: 10px;
+    margin-bottom: 60px;
   }
 }
 
@@ -369,7 +386,7 @@ h3,
   }
 }
 
-.title-description {
+.hero .title-description {
   font-size: 27px;
   color: #f0dfa1;
   font-family: "Roboto Condensed", serif;
@@ -378,6 +395,10 @@ h3,
   line-height: 110%;
   margin-bottom: 40px;
   text-transform: none;
+  max-width: 272px;
+  margin-right: auto;
+  margin-left: auto;
+
   @media screen and (min-width: 768px) {
     font-size: 35px;
     margin-bottom: 49px;
@@ -387,7 +408,7 @@ h3,
   }
   @media screen and (min-width: 1280px) {
     order: -1;
-    /* padding-top: 208px; */
+    /* margin-top: 208px; */
     margin-bottom: 10px;
     font-size: 25px;
     max-width: none;
@@ -1082,17 +1103,23 @@ h3,
   display: flex;
   flex-direction: column;
   gap: 25px;
+  /* margin-top: 40px;
+  @media screen and (min-width: 768px) {
+    margin-top: 66px;
+  } */
+
   @media screen and (min-width: 1280px) {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     row-gap: 51px;
+    /* margin-top: 60px; */
   }
 }
 
 .service-card {
   @media screen and (min-width: 1280px) {
-    max-width: 367px;
+    max-width: 386px;
     display: flex;
     flex-direction: column;
     flex: 1 0 30%;
@@ -1869,7 +1896,7 @@ video.rules-video {
     padding-top: 0;
     padding-bottom: 0;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 240px);
     gap: 22px;
   }
 }
@@ -1928,6 +1955,7 @@ video.rules-video {
     font-size: 20px;
   }
   @media screen and (min-width: 1280px) {
+    max-width: 460px;
     scrollbar-width: thin;
     scrollbar-color: hsl(51, 100%, 49%);
     /* max-width: 800px; */
@@ -1946,10 +1974,14 @@ video.rules-video {
   align-items: center; */
 
   @media screen and (min-width: 768px) {
-    height: 400px;
+    height: 470px;
     overflow: auto;
     line-height: 150%;
     font-size: 20px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    height: 450px;
   }
 }
 
