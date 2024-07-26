@@ -105,13 +105,13 @@ function initializeTestimonialsSwiper() {
   });
   // }
 }
-function initializeFlipSwiper() {
-  //  console.log("Initializing flip Swiper");
-  flipSwiper = new Swiper(".swiper-flip", {
-    effect: "flip",
-    cssMode: true,
-  });
-}
+// function initializeFlipSwiper() {
+//   //  console.log("Initializing flip Swiper");
+//   flipSwiper = new Swiper(".swiper-flip", {
+//     effect: "flip",
+//     cssMode: true,
+//   });
+// }
 
 function destroySwipers() {
   if (heroSwiper && window.innerWidth >= 1280) {
@@ -126,6 +126,14 @@ function destroySwipers() {
       testimonialsSwiper = null;
     }
   }
+}
+
+function flipCard() {
+  document.querySelectorAll(".flip-card").forEach((card) => {
+    card.addEventListener("click", () => {
+      card.classList.toggle("is-flipped");
+    });
+  });
 }
 
 function initScrollToTopBtn() {
@@ -202,6 +210,7 @@ document.addEventListener("DOMContentLoaded", function () {
   changeHeroImage();
   // initializeFlipSwiper();
   rotateLogo();
+  flipCard();
   initScrollToTopBtn();
   initializeTestimonialsSwiper();
   // modal();
