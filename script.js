@@ -86,11 +86,11 @@ function initializeTestimonialsSwiper() {
       perSlideOffset: 10, // Space between cards in px
       perSlideRotate: 1, // Rotation of cards in degrees
     },
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true,
-    },
+    // autoplay: {
+    //   delay: 5000,
+    //   disableOnInteraction: false,
+    //   pauseOnMouseEnter: true,
+    // },
     grabCursor: true,
     // initialSlide: 2,
     centeredSlidesBounds: true,
@@ -98,20 +98,13 @@ function initializeTestimonialsSwiper() {
       el: ".swiper-pagination",
     },
 
-    // navigation: {
-    //   nextEl: ".swiper-button-next",
-    //   prevEl: ".swiper-button-prev",
-    // },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
   });
   // }
 }
-// function initializeFlipSwiper() {
-//   //  console.log("Initializing flip Swiper");
-//   flipSwiper = new Swiper(".swiper-flip", {
-//     effect: "flip",
-//     cssMode: true,
-//   });
-// }
 
 function destroySwipers() {
   if (heroSwiper && window.innerWidth >= 1280) {
@@ -171,39 +164,6 @@ window.addEventListener("resize", function () {
   } else destroySwipers();
 });
 
-function formValidation() {
-  document
-    .getElementById("contactForm")
-    .addEventListener("submit", function (event) {
-      event.preventDefault();
-
-      const name = document.getElementById("name").value;
-      const telephone = document.getElementById("telephone").value;
-      const comment = document.getElementById("comment").value;
-
-      const token = "7412078159:AAHGL2DD3HiwJFxeomF5eQ63kWhrCRQ0-XA";
-      const chatId = "-1002150953194";
-      const message = `Ім'я: ${name}\nТелефон: ${telephone}\nКоментар: ${comment}`;
-
-      const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(
-        message
-      )}`;
-
-      fetch(url)
-        .then((response) => {
-          if (response.ok) {
-            alert("Message sent successfully!");
-            modal.style.display = "none";
-          } else {
-            alert("Failed to send message.");
-          }
-        })
-        .catch((error) => {
-          alert("Error occurred: " + error.message);
-        });
-    });
-}
-
 document.addEventListener("DOMContentLoaded", function () {
   // console.log("DOM content loaded");
   toggleMobileMenu();
@@ -214,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initScrollToTopBtn();
   initializeTestimonialsSwiper();
   // modal();
-  formValidation();
+  // formValidation();
   if (window.innerWidth < 1280) {
     console.log(" window: ", window.innerWidth);
     initializeHeroSwiper();
